@@ -4,6 +4,7 @@ from flask import Flask, render_template
 from pyecharts import options as opts
 from pyecharts.charts import Line
 from time import strftime
+from flask_cors import CORS
 
 # Socket库和配置 
 import threading
@@ -44,7 +45,7 @@ socket_thread.start()
 
 # 后端工作函数
 app = Flask(__name__, static_folder="templates")
-
+CORS(app, resources=r'/*')
 timeList = [strftime('%H:%M:%S') for __ in range(32)]
 dataList = [0 for _ in range(32)]
 

@@ -3,7 +3,7 @@ from socket import *
 import time
 from random import randrange
 
-IP = '127.0.0.1'
+IP = '139.224.246.156'
 SERVER_PORT = 50000
 BUFLEN = 512
 
